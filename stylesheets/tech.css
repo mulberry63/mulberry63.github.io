@@ -1,0 +1,141 @@
+/* ── 全局深色科技风 ── */
+:root {
+  --neon: #00e5ff;
+  --neon-dim: rgba(0, 229, 255, 0.15);
+  --bg-dark: #0a0e1a;
+}
+
+/* 强制深色背景 */
+[data-md-color-scheme="default"] body,
+[data-md-color-scheme="slate"] body {
+  background: var(--bg-dark) !important;
+}
+
+.md-main, .md-content, .md-sidebar {
+  background: transparent !important;
+}
+
+.md-header {
+  background: rgba(10, 14, 26, 0.85) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+/* ── 主标题发光 ── */
+.md-content h1 {
+  color: var(--neon) !important;
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.6), 0 0 40px rgba(0, 229, 255, 0.3);
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+}
+
+.md-content h2 {
+  color: #e0f7fa !important;
+  border-left: 3px solid var(--neon);
+  padding-left: 12px;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+}
+
+/* ── 卡片科技风 ── */
+.md-typeset .grid.cards > :is(ul, ol) > li {
+  background: rgba(0, 229, 255, 0.04) !important;
+  border: 1px solid rgba(0, 229, 255, 0.2) !important;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.md-typeset .grid.cards > :is(ul, ol) > li:hover {
+  border-color: var(--neon) !important;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.3), 0 0 40px rgba(0, 229, 255, 0.1);
+  transform: translateY(-4px);
+  background: rgba(0, 229, 255, 0.08) !important;
+}
+
+/* ── 链接样式 ── */
+.md-typeset a {
+  color: var(--neon) !important;
+  text-decoration: none;
+  transition: text-shadow 0.2s;
+}
+
+.md-typeset a:hover {
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.8);
+}
+
+/* ── 正文字体颜色 ── */
+.md-typeset p, .md-typeset li {
+  color: #b0bec5 !important;
+}
+
+/* ── 分割线 ── */
+.md-typeset hr {
+  border-color: rgba(0, 229, 255, 0.2) !important;
+}
+
+/* ── 导航高亮 ── */
+.md-nav__link--active {
+  color: var(--neon) !important;
+}
+
+/* ── 搜索框 ── */
+.md-search__input {
+  background: rgba(0, 229, 255, 0.05) !important;
+  border: 1px solid rgba(0, 229, 255, 0.2) !important;
+  color: #e0f7fa !important;
+}
+
+/* ── 副标题渐变大字 ── */
+.md-typeset p:first-of-type {
+  font-size: 1.15rem;
+  font-weight: 500;
+  background: linear-gradient(90deg, #00e5ff, #7c4dff, #00e5ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s linear infinite;
+  letter-spacing: 3px;
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ── 封面大图 ── */
+.cover-container {
+  width: 100%;
+  margin: 0.8rem 0 1.5rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.15), 0 0 60px rgba(0, 229, 255, 0.05);
+  position: relative;
+}
+
+.cover-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(10, 14, 26, 0.8) 100%
+  );
+  pointer-events: none;
+}
+
+.cover-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  transition: transform 0.6s ease;
+  filter: brightness(0.85) saturate(1.1);
+}
+
+.cover-container:hover .cover-img {
+  transform: scale(1.03);
+}
