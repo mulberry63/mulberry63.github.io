@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#claude" class="md-skip">
+        <a href="#claude-code" class="md-skip">
           跳转至
         </a>
       
@@ -566,6 +566,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude Code使用
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -582,6 +600,191 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 快速入门：环境搭建与身份认证
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 三种核心模式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 核心术语
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 核心术语">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mcp-model-context-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP (Model Context Protocol)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent Skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SubAgent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 进阶控制技巧
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 进阶控制技巧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rewind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        版本回滚 (Rewind)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        会话恢复 (Resume)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claudemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        项目记忆 (CLAUDE.md)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skip-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        跳过权限确认 (Skip Permissions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 资源管理与清理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 核心命令速查
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -749,6 +952,180 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 快速入门：环境搭建与身份认证
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 三种核心模式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 核心术语
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 核心术语">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mcp-model-context-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP (Model Context Protocol)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent Skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SubAgent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 进阶控制技巧
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 进阶控制技巧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rewind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        版本回滚 (Rewind)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        会话恢复 (Resume)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claudemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        项目记忆 (CLAUDE.md)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skip-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        跳过权限确认 (Skip Permissions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 资源管理与清理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 核心命令速查
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -764,85 +1141,119 @@
 
 
 
-<p>Claude Code 核心术语与实战操作手册</p>
-<p>欢迎来到 AI 原生编程的新时代。作为你的技术布道师，我将带你深度解析 Claude Code——这款由 Anthropic 推出的命令行 AI 代理（Agent）工具。它不只是一个简单的对话框，而是一个能直接接管终端、深度理解万行级代码上下文并自主执行工程任务的“数字开发者”。</p>
-<ol>
-<li>快速起步：Claude Code 的三种“性格” (运行模式)</li>
-</ol>
-<p>理解 Claude Code 的第一步是学会根据任务的复杂度切换其“工作状态”。盲目使用默认配置往往会造成效率浪费，资深开发者会根据具体场景在以下三种模式间丝滑切换：</p>
-<p>模式名称    核心特点    专家级适用场景
-默认模式 (Default)  标准交互，每一步操作、文件写入均需人工确认。  探索性推理：如在陌生的老旧代码库中定位潜在的内存泄漏，或进行零散的代码咨询。
-自动模式 (Auto) 目标导向，AI 会根据既定目标自主进行多轮迭代执行。  确定性修复：已知 Bug 的自动化修复、单元测试补全、或者简单且重复的功能重构。
-规划模式 (Plan) 架构级思考。先生成详尽的执行蓝图供审核，不直接动代码。 复杂工程任务：跨模块的大规模重构、新功能模块的架构设计、涉及多文件关联的逻辑修改。</p>
-<p>💡 核心洞察： 区分 Default 与 Auto 的关键在于你是否愿意“放权”。对于初学者，Plan 模式 是处理逻辑交织难题的保护伞，它能强迫 AI 在动手前进行全局思考，从而极大减少无效的 Token 消耗和代码返工。</p>
+<h1 id="claude-code">Claude Code 使用手册</h1>
+<p>作为开发者，你不仅是在使用一个工具，而是在构建一套 AI 驱动的工程流。本手册旨在通过建立正确的"认知模型"，帮助你快速驾驭 Claude Code，实现从"手动编码"到"意图驱动"的跨越。</p>
 <hr />
-<ol>
-<li>深度拆解：MCP、Agent Skill 与 SubAgent 的本质区别</li>
-</ol>
-<p>这三个术语构成了 Claude Code 的能力骨架。对于开发者来说，理解它们的物理意义决定了你能否真正驾驭这个 Agent。</p>
-<p>核心定义</p>
+<h2 id="1">1. 快速入门：环境搭建与身份认证</h2>
+<p>在启动 Claude Code 之前，请确保本地已安装 <strong>Node.js</strong>。</p>
 <ul>
-<li>MCP (Model Context Protocol)： 它是 Claude 的<strong>“眼睛”</strong>。作为一个通用的外部连接协议，它打破了 AI 的信息孤岛。通过连接 Figma MCP Server，Claude 能直接“看到”设计稿的参数；连接 GitHub MCP，它能跨仓库检索 Issues。它负责解决“信息从哪来”的问题。</li>
-<li>Agent Skill： 它是 Claude 的<strong>“手（动词定义）”</strong>。Skill 是原子化的能力扩展包，本质上是为 Agent 定义的特定工具（Tools）。例如，你可以为它定义一个“运行特定加解密测试”的 Skill，让它掌握原本不具备的专业操作。</li>
-<li>SubAgent (子代理)： 它是 Claude 的<strong>“分身/帮手”</strong>。当主代理面对的工程量突破了上下文窗口限制，或者任务过于琐碎时，它会克隆出一个具备独立权限的子实例。</li>
+<li><strong>第一步：全局安装工具</strong> — 使用 npm 将 Claude Code 集成到系统路径中</li>
+<li><strong>第二步：身份认证与授权</strong> — 启动 OAuth 流程，在浏览器中完成开发者身份验证</li>
 </ul>
-<p>专家级对比：能力边界一览</p>
-<p>概念  核心功能    深度辨析
-MCP 外部连接器   关乎外部信息获取。让 AI 具备读取非本地数据的能力。
-Agent Skill 自身能力增强  关乎原子能力定义。给 AI 增加一个特定的“动作”或“指令”。
-SubAgent    复杂任务分工  关乎权限委派与治理。为了防止主对话上下文溢出，将子任务剥离给新实例处理。</p>
-<p>💡 核心洞察： 在处理万行代码的大型项目时，SubAgent 的引入至关重要。它不仅是分工，更是为了保护上下文（Context Window）。通过将子任务外包，主代理可以保持清晰的架构视角，而不被细枝末节的实现代码淹没。</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@anthropic-ai/claude-code
+claude
+</code></pre></div>
 <hr />
-<ol>
-<li>实战指令：接管你的终端开发流程</li>
-</ol>
-<p>Claude Code 的强大源于它对终端（Terminal）的深度控制力。它不是在“写代码建议”，而是在“直接操作环境”。</p>
-<p>终端控制与 Bash 执行</p>
-<p>你可以直接在对话中使用自然语言驱动 Bash 命令，Claude 会自动将其转化为可执行语句：</p>
-<h1 id="claude">示例：要求 Claude 自动化处理流程</h1>
-<p>claude "查找 src 目录下所有未使用的导出函数，并编写一个删除脚本"</p>
-<p>特殊权限：生产力加速器</p>
-<p>在信任的本地环境或大规模重构中，频繁的 y/n 确认会彻底击碎开发心流。</p>
-<ul>
-<li>指令： dangerously-skip-permissions</li>
-<li>专家应用场景： 当你需要进行全局变量重命名或自动化迁移 100+ 个文件时，该指令是必选项。它同样适用于 CI/CD 自动化流水线，让 AI 在无人值守的情况下完成既定任务。</li>
-<li>⚠️ 安全警示： 权力越大责任越大，请务必确保在 Git 状态干净的环境下使用，以便随时回滚。</li>
-</ul>
-<p>后台任务管理 (Background Tasks)</p>
-<p>Claude 允许你在对话窗口启动耗时任务（如编译、长测试集）。</p>
-<ul>
-<li>你可以让它：“在后台运行测试，如果报错了立刻打断我，没报错就继续优化文档。”这种并行心流是资深 AI 程序员的核心优势。</li>
-</ul>
+<h2 id="2">2. 三种核心模式</h2>
+<p>理解模式的区别，是保持工程架构完整性的关键。</p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>核心用途</th>
+<th>触发方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>默认模式 (Default)</td>
+<td>基础交互、单文件修改与即时问答</td>
+<td>直接输入 <code>claude</code> 启动</td>
+</tr>
+<tr>
+<td>自动模式 (Auto)</td>
+<td>追求执行速度，允许 AI 自动连续执行操作</td>
+<td>适用于确定性高、重复性强的任务</td>
+</tr>
+<tr>
+<td>规划模式 (Plan)</td>
+<td>深度架构分析，处理跨文件重构或复杂功能</td>
+<td><code>claude --plan</code> 或会话中切换</td>
+</tr>
+</tbody>
+</table>
+<p><strong>规划模式的核心价值</strong>在于其"先思考，后执行"的逻辑——它会强制 AI 在修改代码前先输出技术方案蓝图，有效避免在大规模工程中产生逻辑碎片。</p>
 <hr />
-<ol>
-<li>记忆与回溯：管理上下文与项目状态</li>
-</ol>
-<p>AI 的“短期记忆”依赖对话流，而“长期记忆”则依赖规则配置。</p>
-<ul>
-<li>⌛ 版本回滚 (Rewind)：这是开发者的“时光机”。当 AI 的多步修改导致程序崩溃时，使用 Rewind 可以精准回溯到任何一个历史节点。</li>
-<li>🔄 会话恢复 (Resume)：通过 resume 命令，你可以找回昨天的思路，无需重新喂入背景信息，保持开发的连续性。</li>
-<li>📓 项目记忆 (CLAUDE.md)：这是给 Claude 的“项目说明书”。你应在此文件中写入项目的编码规范、技术栈偏好（如：必须使用 Tailwind）以及避坑指南。Claude 每次启动都会优先阅读。</li>
-</ul>
-<p>高效管理上下文的 3 个关键动作</p>
-<ol>
-<li>🧹 定期清理 (Clear/Compact)：当对话历史过长导致响应延迟时，主动执行清理，保留核心结论。</li>
-<li>📌 状态同步：在长时间对话后，要求 Claude 总结当前进度并写入 CLAUDE.md。</li>
-<li>⚖️ 权限下放：利用 dangerously-skip-permissions 处理琐碎修改，保持主对话流的简洁。</li>
-</ol>
+<h2 id="3">3. 核心术语</h2>
+<h3 id="mcp-model-context-protocol">MCP (Model Context Protocol)</h3>
+<p>MCP 是连接 AI 与外部世界的标准协议。它不仅是安装，更是"能力的连接"，允许 AI 直接调用外部数据源（如数据库或设计稿）。</p>
+<h3 id="agent-skill">Agent Skill</h3>
+<p>Skill 是为 Claude 注入的"领域知识包"。它定义了 AI 在特定场景下可以调用的工具集，是提升 AI 任务成功率的专家经验沉淀。</p>
+<h3 id="subagent">SubAgent</h3>
+<p>SubAgent 是复杂任务下的"协作逻辑"。当主智能体判定任务规模超过单一上下文的处理能力时，会自动分发子任务给 SubAgent，实现并行开发与隔离。</p>
+<h3 id="hook">Hook</h3>
+<p>Hook 是实现 AI 自动化工作流的切入点。通过定义钩子，你可以在特定生命周期（如提交代码前）强制执行 AI 检查。</p>
 <hr />
-<ol>
-<li>
-<p>高级扩展：多模态处理与自动化 Hook</p>
-</li>
-<li>
-<p>多模态视觉处理：Claude Code 能够“阅读”图片。你可以直接输入报错截图或 UI 设计图。</p>
-</li>
-<li>Figma + MCP 实战：最顶级的玩法是利用 Figma MCP 提取设计标记（Tokens），结合 Claude 的多模态能力，实现“看一眼设计稿，直接产出符合规范的 React 组件”。</li>
-<li>Hook 机制：将 Claude 集成到 Git 工作流中。例如配置一个 pre-commit Hook，让 Claude 在你提交代码前自动审查潜在的逻辑缺陷。</li>
-</ol>
-<p>🚀 实战结语</p>
-<p>从简单的 Bash 命令起步，逐步尝试在复杂任务中调用 SubAgent。你会发现，Claude Code 不只是一个工具，它是一个可以随着 CLAUDE.md 的完善而不断进化的“数字合伙人”。</p>
-<p>💡 终极洞察： 真正的生产力飞跃，发生在 多模态能力 与 外部协议 (MCP) 的结合点上。这标志着开发模式从“手动搬运代码”转变为“高阶逻辑编排”。现在，去终端开启你的第一个指令，感受 AI 代理接管生产力的震撼吧！</p>
+<h2 id="4">4. 进阶控制技巧</h2>
+<h3 id="rewind">版本回滚 (Rewind)</h3>
+<p><strong>适用场景</strong>：AI 在多文件重构中产生"状态污染"或引入循环依赖，无法通过 Git 快速定位错误。</p>
+<p><strong>作用</strong>：将代码状态和 AI 的记忆同步回退到健康的时间点。</p>
+<h3 id="resume">会话恢复 (Resume)</h3>
+<p><strong>适用场景</strong>：深度讨论复杂逻辑时因网络异常或终端重启，导致对话上下文丢失。</p>
+<p><strong>作用</strong>：无缝找回历史会话，确保逻辑链条的连续性。</p>
+<h3 id="claudemd">项目记忆 (CLAUDE.md)</h3>
+<p><strong>适用场景</strong>：AI 反复违反代码风格（缩进、命名规范）或业务领域的特定禁忌。</p>
+<p><strong>作用</strong>：作为"工程大脑"，存储持久化的项目级指令，Claude 每次启动都会优先读取。</p>
+<h3 id="skip-permissions">跳过权限确认 (Skip Permissions)</h3>
+<p><strong>适用场景</strong>：在受信任的沙盒环境中执行大量文件读写，厌倦频繁的手动 Y/N 确认。</p>
+<div class="highlight"><pre><span></span><code>claude<span class="w"> </span>--dangerously-skip-permissions
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">安全提示</p>
+<p>此模式权力极大，请务必在 Git 状态干净的环境下使用，以便随时回滚。</p>
+</div>
+<hr />
+<h2 id="5">5. 资源管理与清理</h2>
+<p>高效的上下文管理能显著降低 Token 消耗并提升 AI 的响应质量：</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/tasks</code></td>
+<td>查看后台异步执行的任务，防止任务僵死</td>
+</tr>
+<tr>
+<td><code>/compact</code></td>
+<td>AI 总结当前会话重点并清理冗余历史，释放上下文窗口</td>
+</tr>
+<tr>
+<td><code>/clear</code></td>
+<td>切换不同开发任务前清除缓存，防止旧逻辑干扰新思路</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6">6. 核心命令速查</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># 初始化并进入 Claude 开发环境</span>
+claude
+
+<span class="c1"># 针对复杂功能开启&quot;先规划后代码&quot;模式</span>
+claude<span class="w"> </span>--plan
+
+<span class="c1"># 灾难恢复：撤销最近一次不理想的代码更改</span>
+claude<span class="w"> </span>rewind
+
+<span class="c1"># 断点续传：重新找回之前的开发上下文</span>
+claude<span class="w"> </span>resume
+
+<span class="c1"># 极速模式：跳过所有交互确认（仅限受信任环境）</span>
+claude<span class="w"> </span>--dangerously-skip-permissions
+</code></pre></div>
 
 
 
