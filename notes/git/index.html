@@ -587,7 +587,7 @@
   <a href="#add" class="md-nav__link">
     <span class="md-ellipsis">
       
-        使用 add 暂存
+        暂存 (add)
       
     </span>
   </a>
@@ -595,10 +595,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#commit-git" class="md-nav__link">
+  <a href="#commit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        使用 commit 提交到 git 仓库
+        提交 (commit)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        忽略文件 (.gitignore)
       
     </span>
   </a>
@@ -607,6 +618,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        远程仓库
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分支管理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        撤销与回退
+      
+    </span>
+  </a>
   
 </li>
       
@@ -869,7 +913,7 @@
   <a href="#add" class="md-nav__link">
     <span class="md-ellipsis">
       
-        使用 add 暂存
+        暂存 (add)
       
     </span>
   </a>
@@ -877,10 +921,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#commit-git" class="md-nav__link">
+  <a href="#commit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        使用 commit 提交到 git 仓库
+        提交 (commit)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        忽略文件 (.gitignore)
       
     </span>
   </a>
@@ -889,6 +944,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        远程仓库
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分支管理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        撤销与回退
+      
+    </span>
+  </a>
   
 </li>
       
@@ -909,53 +997,71 @@
 
 
 
-<h1 id="git">git 命令行概览</h1>
+<h1 id="git">git 命令速查</h1>
+<p>常用 git 命令汇总，快速查阅。</p>
+<hr />
 <h2 id="_1">初始配置</h2>
-<div class="highlight"><pre><span></span><code>git config --global user.name &quot;mulberry63&quot;
-git config --global user.email &quot;1677815534@qq.com&quot;
-git config --global init.defaultBranch master #将默认的名称修改为master
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;mulberry63&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;1677815534@qq.com&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>init.defaultBranch<span class="w"> </span>master<span class="w">  </span><span class="c1"># 默认分支名改为 master</span>
 
-git init #初始化仓库
+git<span class="w"> </span>init<span class="w">  </span><span class="c1"># 初始化仓库</span>
 </code></pre></div>
-<p>初始化以后，在linux里面以 “.” 开头的文件和文件夹都属于隐藏目录，使用<code>ls-a</code>才能查看</p>
+<div class="admonition tip">
+<p class="admonition-title">提示</p>
+<p>Linux 中以 <code>.</code> 开头的文件和文件夹为隐藏目录，使用 <code>ls -a</code> 才能查看。</p>
+</div>
+<hr />
 <h2 id="_2">提交代码</h2>
-<h3 id="add">使用 add 暂存</h3>
-<ul>
-<li>暂存单个文件：</li>
-</ul>
-<div class="highlight"><pre><span></span><code>git add src/status_interfaces/package.xml 
+<h3 id="add">暂存 (add)</h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>src/status_interfaces/package.xml<span class="w">  </span><span class="c1"># 暂存单个文件</span>
+git<span class="w"> </span>add<span class="w"> </span>src<span class="w">                                 </span><span class="c1"># 暂存某个目录</span>
+git<span class="w"> </span>add<span class="w"> </span>.<span class="w">                                   </span><span class="c1"># 暂存当前目录所有文件</span>
+git<span class="w"> </span>reset<span class="w">                                   </span><span class="c1"># 将暂存区所有文件踢出</span>
 </code></pre></div>
-<ul>
-<li>暂存某个目录：</li>
-</ul>
-<p><div class="highlight"><pre><span></span><code>git add src 
+<blockquote>
+<p>工程中 <code>build/</code>、<code>install/</code>、<code>log/</code> 都是编译产生的目录，不建议提交，只提交 <code>src</code> 即可。</p>
+</blockquote>
+<h3 id="commit">提交 (commit)</h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;完成状态发布与显示功能&quot;</span><span class="w">  </span><span class="c1"># 提交暂存区代码并添加备注</span>
+git<span class="w"> </span>log<span class="w">                                  </span><span class="c1"># 查看提交历史日志</span>
 </code></pre></div>
-- 暂存当前终端目录的所有文件：</p>
-<p><div class="highlight"><pre><span></span><code>git add . 
-</code></pre></div>
-- 将暂存区所有文件踢出：</p>
-<div class="highlight"><pre><span></span><code>git reset
-</code></pre></div>
-<p>注：工程中，build， install， log都是编译产生的目录，不建议提交。只提交src即可</p>
-<h3 id="commit-git">使用 commit 提交到 git 仓库</h3>
-<ul>
-<li>把暂存区的代码提交，并批注
-<div class="highlight"><pre><span></span><code>git commit -m &quot;完成状态发布与显示功能&quot;
-</code></pre></div></li>
-<li>
-<p>查看提交的历史日志：
-<div class="highlight"><pre><span></span><code>git log
-</code></pre></div></p>
-</li>
-<li>
-<p>创建 .gitignore 文件，在add的时候就会忽略以下文件or目录</p>
-</li>
-</ul>
-<p>例如：
+<h3 id="gitignore">忽略文件 (.gitignore)</h3>
+<p>创建 <code>.gitignore</code> 文件，<code>git add</code> 时会自动忽略其中列出的文件或目录：</p>
 <div class="highlight"><pre><span></span><code>build/
 install/
 log/
-</code></pre></div></p>
+</code></pre></div>
+<hr />
+<h2 id="_3">远程仓库</h2>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>&lt;url&gt;<span class="w">   </span><span class="c1"># 关联远程仓库</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>master<span class="w">     </span><span class="c1"># 首次推送并设置上游</span>
+git<span class="w"> </span>push<span class="w">                      </span><span class="c1"># 后续推送</span>
+git<span class="w"> </span>pull<span class="w">                      </span><span class="c1"># 拉取远程更新</span>
+git<span class="w"> </span>clone<span class="w"> </span>&lt;url&gt;<span class="w">               </span><span class="c1"># 克隆远程仓库</span>
+</code></pre></div>
+<hr />
+<h2 id="_4">分支管理</h2>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w">                    </span><span class="c1"># 查看本地分支</span>
+git<span class="w"> </span>branch<span class="w"> </span>&lt;branch-name&gt;<span class="w">      </span><span class="c1"># 创建新分支</span>
+git<span class="w"> </span>checkout<span class="w"> </span>&lt;branch-name&gt;<span class="w">    </span><span class="c1"># 切换分支</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>&lt;branch-name&gt;<span class="w"> </span><span class="c1"># 创建并切换</span>
+git<span class="w"> </span>merge<span class="w"> </span>&lt;branch-name&gt;<span class="w">       </span><span class="c1"># 合并分支到当前分支</span>
+git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>&lt;branch-name&gt;<span class="w">   </span><span class="c1"># 删除分支</span>
+</code></pre></div>
+<hr />
+<h2 id="_5">撤销与回退</h2>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>status<span class="w">                    </span><span class="c1"># 查看工作区状态</span>
+git<span class="w"> </span>diff<span class="w">                      </span><span class="c1"># 查看未暂存的改动</span>
+git<span class="w"> </span>restore<span class="w"> </span>&lt;file&gt;<span class="w">            </span><span class="c1"># 撤销工作区改动（未暂存）</span>
+git<span class="w"> </span>restore<span class="w"> </span>--staged<span class="w"> </span>&lt;file&gt;<span class="w">   </span><span class="c1"># 撤销暂存（保留工作区改动）</span>
+git<span class="w"> </span>revert<span class="w"> </span>&lt;commit&gt;<span class="w">           </span><span class="c1"># 创建一个撤销提交（安全）</span>
+git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>&lt;commit&gt;<span class="w">     </span><span class="c1"># 强制回退到某次提交（危险）</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p><code>git reset --hard</code> 会丢失未提交的所有改动，操作前请确认工作区已保存。</p>
+</div>
 
 
 
