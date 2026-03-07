@@ -6,7 +6,6 @@
 }
 
 /* 强制深色背景 */
-[data-md-color-scheme="default"] body,
 [data-md-color-scheme="slate"] body {
   background: var(--bg-dark) !important;
 }
@@ -65,7 +64,7 @@
 
 /* ── 正文字体颜色 ── */
 .md-typeset p, .md-typeset li {
-  color: #b0bec5 !important;
+  color: #cfd8dc !important;
 }
 
 /* ── 分割线 ── */
@@ -85,8 +84,8 @@
   color: #e0f7fa !important;
 }
 
-/* ── 副标题渐变大字 ── */
-.md-typeset p:first-of-type {
+/* ── 首页 hero 引言渐变大字 ── */
+.hero-quote {
   font-size: 1.15rem;
   font-weight: 500;
   background: linear-gradient(90deg, #00e5ff, #7c4dff, #00e5ff);
@@ -96,6 +95,7 @@
   background-clip: text;
   animation: gradient-shift 4s linear infinite;
   letter-spacing: 3px;
+  color: transparent !important;
 }
 
 @keyframes gradient-shift {
