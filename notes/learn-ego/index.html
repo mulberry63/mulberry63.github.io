@@ -12,13 +12,9 @@
         <meta name="author" content="363">
       
       
-        <link rel="canonical" href="https://mulberry63.github.io/notes/claude%20code/">
+        <link rel="canonical" href="https://mulberry63.github.io/notes/learn-ego/">
       
       
-        <link rel="prev" href="../course%20score/">
-      
-      
-        <link rel="next" href="../../portfolio/">
       
       
         
@@ -29,7 +25,7 @@
     
     
       
-        <title>Claude Code使用 - 363的混乱空间</title>
+        <title>EGO-Planner Swarm 踩坑记录 - 363的混乱空间</title>
       
     
     
@@ -82,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#claude-code" class="md-skip">
+        <a href="#ego-planner-swarm" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Claude Code使用
+              EGO-Planner Swarm 踩坑记录
             
           </span>
         </div>
@@ -237,12 +233,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../" class="md-tabs__link">
           
   
@@ -392,8 +386,6 @@
       
   
   
-    
-  
   
   
     
@@ -415,17 +407,14 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -447,13 +436,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -554,37 +543,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Claude Code使用
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../claude%20code/" class="md-nav__link">
         
   
   
@@ -600,192 +562,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 快速入门：环境搭建与身份认证
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 三种核心模式
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 核心术语
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 核心术语">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mcp-model-context-protocol" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MCP (Model Context Protocol)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#agent-skill" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Agent Skill
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subagent" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SubAgent
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hook" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hook
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 进阶控制技巧
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. 进阶控制技巧">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rewind" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        版本回滚 (Rewind)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resume" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        会话恢复 (Resume)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#claudemd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        项目记忆 (CLAUDE.md)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#skip-permissions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        跳过权限确认 (Skip Permissions)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. 资源管理与清理
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. 核心命令速查
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -959,10 +735,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-rviz2-segfault" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 快速入门：环境搭建与身份认证
+        1. RViz2 启动闪退（Segfault）
       
     </span>
   </a>
@@ -970,10 +746,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-cyclonedds" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 三种核心模式
+        2. 为什么要换 CycloneDDS？
       
     </span>
   </a>
@@ -981,63 +757,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-bashrc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 核心术语
+        3. .bashrc 的作用
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="3. 核心术语">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mcp-model-context-protocol" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MCP (Model Context Protocol)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#agent-skill" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Agent Skill
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subagent" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SubAgent
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hook" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hook
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1045,68 +771,7 @@
   <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 进阶控制技巧
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. 进阶控制技巧">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rewind" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        版本回滚 (Rewind)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resume" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        会话恢复 (Resume)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#claudemd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        项目记忆 (CLAUDE.md)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#skip-permissions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        跳过权限确认 (Skip Permissions)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. 资源管理与清理
+        4. 是否需要独立环境？
       
     </span>
   </a>
@@ -1114,10 +779,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
+  <a href="#bashrc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. 核心命令速查
+        附：当前 .bashrc 末尾配置
       
     </span>
   </a>
@@ -1141,121 +806,51 @@
 
 
 
-<h1 id="claude-code">Claude Code 使用手册</h1>
-<p>前言：打开claude code：
-- 以管理员身份打开clash
-- 同时开启system proxy和TUN mode</p>
-<p>作为开发者，你不仅是在使用一个工具，而是在构建一套 AI 驱动的工程流。本手册旨在通过建立正确的"认知模型"，帮助你快速驾驭 Claude Code，实现从"手动编码"到"意图驱动"的跨越。</p>
+<h1 id="ego-planner-swarm">EGO-Planner Swarm 踩坑记录</h1>
+<blockquote>
+<p>环境：WSL2 + Ubuntu 22.04 + ROS2 Humble</p>
+</blockquote>
 <hr />
-<h2 id="1">1. 快速入门：环境搭建与身份认证</h2>
-<p>在启动 Claude Code 之前，请确保本地已安装 <strong>Node.js</strong>。</p>
-<ul>
-<li><strong>第一步：全局安装工具</strong> — 使用 npm 将 Claude Code 集成到系统路径中</li>
-<li><strong>第二步：身份认证与授权</strong> — 启动 OAuth 流程，在浏览器中完成开发者身份验证</li>
-</ul>
-<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@anthropic-ai/claude-code
-claude
+<h2 id="1-rviz2-segfault">1. RViz2 启动闪退（Segfault）</h2>
+<p><strong>问题：</strong> 运行 <code>rviz2</code> 后出现 <code>D3D12: Removing Device</code> 和 <code>Segmentation fault</code>，窗口闪退。</p>
+<p><strong>解决：</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">LIBGL_ALWAYS_SOFTWARE</span><span class="o">=</span><span class="m">1</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export LIBGL_ALWAYS_SOFTWARE=1&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
 </code></pre></div>
+<blockquote>
+<p><strong>原理：</strong> WSLg 通过 d3d12 后端把 3D 渲染交给 Windows 侧 GPU，这条路径不稳定。该变量强制改用 CPU 软件渲染，绕开 GPU，兼容性更好。</p>
+</blockquote>
 <hr />
-<h2 id="2">2. 三种核心模式</h2>
-<p>理解模式的区别，是保持工程架构完整性的关键。</p>
-<table>
-<thead>
-<tr>
-<th>模式</th>
-<th>核心用途</th>
-<th>触发方式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>默认模式 (Default)</td>
-<td>基础交互、单文件修改与即时问答</td>
-<td>直接输入 <code>claude</code> 启动</td>
-</tr>
-<tr>
-<td>自动模式 (Auto)</td>
-<td>追求执行速度，允许 AI 自动连续执行操作</td>
-<td>适用于确定性高、重复性强的任务</td>
-</tr>
-<tr>
-<td>规划模式 (Plan)</td>
-<td>深度架构分析，处理跨文件重构或复杂功能</td>
-<td><code>claude --plan</code> 或会话中切换</td>
-</tr>
-</tbody>
-</table>
-<p><strong>规划模式的核心价值</strong>在于其"先思考，后执行"的逻辑——它会强制 AI 在修改代码前先输出技术方案蓝图，有效避免在大规模工程中产生逻辑碎片。</p>
-<hr />
-<h2 id="3">3. 核心术语</h2>
-<h3 id="mcp-model-context-protocol">MCP (Model Context Protocol)</h3>
-<p>MCP 是连接 AI 与外部世界的标准协议。它不仅是安装，更是"能力的连接"，允许 AI 直接调用外部数据源（如数据库或设计稿）。</p>
-<h3 id="agent-skill">Agent Skill</h3>
-<p>Skill 是为 Claude 注入的"领域知识包"。它定义了 AI 在特定场景下可以调用的工具集，是提升 AI 任务成功率的专家经验沉淀。</p>
-<h3 id="subagent">SubAgent</h3>
-<p>SubAgent 是复杂任务下的"协作逻辑"。当主智能体判定任务规模超过单一上下文的处理能力时，会自动分发子任务给 SubAgent，实现并行开发与隔离。</p>
-<h3 id="hook">Hook</h3>
-<p>Hook 是实现 AI 自动化工作流的切入点。通过定义钩子，你可以在特定生命周期（如提交代码前）强制执行 AI 检查。</p>
-<hr />
-<h2 id="4">4. 进阶控制技巧</h2>
-<h3 id="rewind">版本回滚 (Rewind)</h3>
-<p><strong>适用场景</strong>：AI 在多文件重构中产生"状态污染"或引入循环依赖，无法通过 Git 快速定位错误。</p>
-<p><strong>作用</strong>：将代码状态和 AI 的记忆同步回退到健康的时间点。</p>
-<h3 id="resume">会话恢复 (Resume)</h3>
-<p><strong>适用场景</strong>：深度讨论复杂逻辑时因网络异常或终端重启，导致对话上下文丢失。</p>
-<p><strong>作用</strong>：无缝找回历史会话，确保逻辑链条的连续性。</p>
-<h3 id="claudemd">项目记忆 (CLAUDE.md)</h3>
-<p><strong>适用场景</strong>：AI 反复违反代码风格（缩进、命名规范）或业务领域的特定禁忌。</p>
-<p><strong>作用</strong>：作为"工程大脑"，存储持久化的项目级指令，Claude 每次启动都会优先读取。</p>
-<h3 id="skip-permissions">跳过权限确认 (Skip Permissions)</h3>
-<p><strong>适用场景</strong>：在受信任的沙盒环境中执行大量文件读写，厌倦频繁的手动 Y/N 确认。</p>
-<div class="highlight"><pre><span></span><code>claude<span class="w"> </span>--dangerously-skip-permissions
+<h2 id="2-cyclonedds">2. 为什么要换 CycloneDDS？</h2>
+<p><strong>问题：</strong> 使用 ROS2 默认的 FastDDS 运行 EGO-Planner 时非常卡顿。</p>
+<p><strong>解决：</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">source</span><span class="w"> </span>~/.bashrc
 </code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">安全提示</p>
-<p>此模式权力极大，请务必在 Git 状态干净的环境下使用，以便随时回滚。</p>
-</div>
+<blockquote>
+<p><strong>原理：</strong> DDS 是 ROS2 节点间通信的中间件。FastDDS 和 CycloneDDS 功能一样但实现不同，EGO-Planner 作者发现 FastDDS 与其发布订阅模式不兼容。ROS2 允许通过一个环境变量无缝切换。</p>
+</blockquote>
 <hr />
-<h2 id="5">5. 资源管理与清理</h2>
-<p>高效的上下文管理能显著降低 Token 消耗并提升 AI 的响应质量：</p>
-<table>
-<thead>
-<tr>
-<th>指令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/tasks</code></td>
-<td>查看后台异步执行的任务，防止任务僵死</td>
-</tr>
-<tr>
-<td><code>/compact</code></td>
-<td>AI 总结当前会话重点并清理冗余历史，释放上下文窗口</td>
-</tr>
-<tr>
-<td><code>/clear</code></td>
-<td>切换不同开发任务前清除缓存，防止旧逻辑干扰新思路</td>
-</tr>
-</tbody>
-</table>
+<h2 id="3-bashrc">3. .bashrc 的作用</h2>
+<p><strong>问题：</strong> 每次开新终端都要重新 <code>export</code> 环境变量。</p>
+<p><strong>解决：</strong> 把 <code>export</code> 语句写进 <code>~/.bashrc</code> 末尾即可永久生效。</p>
+<blockquote>
+<p><strong>原理：</strong> <code>~/.bashrc</code> 是每次打开终端时自动执行的脚本，相当于终端的开机自启动清单。</p>
+</blockquote>
 <hr />
-<h2 id="6">6. 核心命令速查</h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># 初始化并进入 Claude 开发环境</span>
-claude
-
-<span class="c1"># 针对复杂功能开启&quot;先规划后代码&quot;模式</span>
-claude<span class="w"> </span>--plan
-
-<span class="c1"># 灾难恢复：撤销最近一次不理想的代码更改</span>
-claude<span class="w"> </span>rewind
-
-<span class="c1"># 断点续传：重新找回之前的开发上下文</span>
-claude<span class="w"> </span>resume
-
-<span class="c1"># 极速模式：跳过所有交互确认（仅限受信任环境）</span>
-claude<span class="w"> </span>--dangerously-skip-permissions
+<h2 id="4">4. 是否需要独立环境？</h2>
+<p><strong>问题：</strong> 担心 EGO-Planner 的依赖污染现有 ROS2 环境。</p>
+<p><strong>解决：</strong> 不需要，直接建新 workspace 即可。不要把 <code>source install/setup.bash</code> 写进 <code>.bashrc</code>，用时手动 source 更灵活。</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>~/ego_ws
+</code></pre></div>
+<blockquote>
+<p><strong>原理：</strong> ROS2 workspace 天然隔离——编译产物都在 <code>install/</code> 目录下，不 source 就不加载，不影响其他项目。只有依赖不同 ROS2 版本时才需要 Docker。</p>
+</blockquote>
+<hr />
+<h2 id="bashrc">附：当前 .bashrc 末尾配置</h2>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>/opt/ros/humble/setup.bash
+<span class="nb">export</span><span class="w"> </span><span class="nv">LIBGL_ALWAYS_SOFTWARE</span><span class="o">=</span><span class="m">1</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">RMW_IMPLEMENTATION</span><span class="o">=</span>rmw_cyclonedds_cpp
 </code></pre></div>
 
 
