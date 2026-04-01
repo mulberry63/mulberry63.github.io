@@ -20,12 +20,15 @@
   border-bottom: 1px solid rgba(0, 229, 255, 0.2);
 }
 
-/* ── 主标题发光 ── */
+/* ── 主标题 ── */
 .md-content h1 {
-  color: var(--neon) !important;
-  text-shadow: 0 0 20px rgba(0, 229, 255, 0.6), 0 0 40px rgba(0, 229, 255, 0.3);
-  font-size: 2.4rem;
-  letter-spacing: 2px;
+  color: #e8eaf6 !important;
+  text-shadow: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  border-bottom: 1px solid rgba(0, 229, 255, 0.15);
+  padding-bottom: 0.4rem;
 }
 
 .md-content h2 {
