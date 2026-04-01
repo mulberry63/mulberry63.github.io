@@ -12,25 +12,31 @@
         <meta name="author" content="363">
       
       
+        <link rel="canonical" href="https://mulberry63.github.io/notes/robotics/learn-ego/">
       
+      
+        <link rel="prev" href="../ros2/">
+      
+      
+        <link rel="next" href="../../tools/">
       
       
         
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>363的混乱空间</title>
+        <title>egoplanner+ROS2 - 363的混乱空间</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,9 +53,9 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5.0.0/index.css">
     
-      <link rel="stylesheet" href="/stylesheets/tech.css">
+      <link rel="stylesheet" href="../../../stylesheets/tech.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#ego-planner-swarm" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -85,7 +96,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/." title="363的混乱空间" class="md-header__button md-logo" aria-label="363的混乱空间" data-md-component="logo">
+    <a href="../../.." title="363的混乱空间" class="md-header__button md-logo" aria-label="363的混乱空间" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -105,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              egoplanner+ROS2
             
           </span>
         </div>
@@ -188,7 +199,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
   
@@ -206,11 +217,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/notes/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -232,7 +245,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/portfolio/" class="md-tabs__link">
+        <a href="../../../portfolio/" class="md-tabs__link">
           
   
   
@@ -254,7 +267,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/blog/" class="md-tabs__link">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   
@@ -276,7 +289,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/about/" class="md-tabs__link">
+        <a href="../../../about/" class="md-tabs__link">
           
   
   
@@ -318,7 +331,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="363的混乱空间" class="md-nav__button md-logo" aria-label="363的混乱空间" data-md-component="logo">
+    <a href="../../.." title="363的混乱空间" class="md-nav__button md-logo" aria-label="363的混乱空间" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -359,7 +372,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/." class="md-nav__link ">
+            <a href="../../.." class="md-nav__link ">
               
   
   
@@ -402,6 +415,8 @@
       
   
   
+    
+  
   
   
     
@@ -423,20 +438,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/notes/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -454,13 +472,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -494,10 +512,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -505,7 +526,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/notes/courses/" class="md-nav__link ">
+            <a href="../../courses/" class="md-nav__link ">
               
   
   
@@ -523,7 +544,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -549,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes/courses/course-score/" class="md-nav__link">
+      <a href="../../courses/course-score/" class="md-nav__link">
         
   
   
@@ -582,6 +603,8 @@
                 
   
   
+    
+  
   
   
     
@@ -601,18 +624,21 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/notes/robotics/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -630,13 +656,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -656,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes/robotics/ros2/" class="md-nav__link">
+      <a href="../ros2/" class="md-nav__link">
         
   
   
@@ -681,10 +707,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/notes/robotics/learn-ego/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    egoplanner+ROS2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -700,6 +753,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-rviz2-segfault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. RViz2 启动闪退（Segfault）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-cyclonedds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 为什么要换 CycloneDDS？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bashrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. .bashrc 的作用
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 是否需要独立环境？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bashrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附：当前 .bashrc 末尾配置
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -740,10 +868,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -751,7 +882,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/notes/tools/" class="md-nav__link ">
+            <a href="../../tools/" class="md-nav__link ">
               
   
   
@@ -769,7 +900,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -795,7 +926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes/tools/git/" class="md-nav__link">
+      <a href="../../tools/git/" class="md-nav__link">
         
   
   
@@ -823,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes/tools/latex-cheatsheet/" class="md-nav__link">
+      <a href="../../tools/latex-cheatsheet/" class="md-nav__link">
         
   
   
@@ -851,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes/tools/claude-code/" class="md-nav__link">
+      <a href="../../tools/claude-code/" class="md-nav__link">
         
   
   
@@ -879,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/notes/tools/workflow/" class="md-nav__link">
+      <a href="../../tools/workflow/" class="md-nav__link">
         
   
   
@@ -927,10 +1058,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -938,7 +1072,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/notes/cs/" class="md-nav__link ">
+            <a href="../../cs/" class="md-nav__link ">
               
   
   
@@ -1015,7 +1149,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/portfolio/" class="md-nav__link ">
+            <a href="../../../portfolio/" class="md-nav__link ">
               
   
   
@@ -1084,7 +1218,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/blog/" class="md-nav__link ">
+            <a href="../../../blog/" class="md-nav__link ">
               
   
   
@@ -1186,7 +1320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   
@@ -1231,6 +1365,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-rviz2-segfault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. RViz2 启动闪退（Segfault）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-cyclonedds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 为什么要换 CycloneDDS？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bashrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. .bashrc 的作用
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 是否需要独立环境？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bashrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附：当前 .bashrc 末尾配置
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1246,11 +1445,115 @@
 
 
 
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    学习笔记
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Robotics
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="ego-planner-swarm">EGO-Planner Swarm 踩坑记录<a class="headerlink" href="#ego-planner-swarm" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>环境：WSL2 + Ubuntu 22.04 + ROS2 Humble</p>
+</blockquote>
+<hr />
+<h2 id="1-rviz2-segfault">1. RViz2 启动闪退（Segfault）<a class="headerlink" href="#1-rviz2-segfault" title="Permanent link">&para;</a></h2>
+<p><strong>问题：</strong> 运行 <code>rviz2</code> 后出现 <code>D3D12: Removing Device</code> 和 <code>Segmentation fault</code>，窗口闪退。</p>
+<p><strong>解决：</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">LIBGL_ALWAYS_SOFTWARE</span><span class="o">=</span><span class="m">1</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export LIBGL_ALWAYS_SOFTWARE=1&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+</span></code></pre></div>
+<blockquote>
+<p><strong>原理：</strong> WSLg 通过 d3d12 后端把 3D 渲染交给 Windows 侧 GPU，这条路径不稳定。该变量强制改用 CPU 软件渲染，绕开 GPU，兼容性更好。</p>
+</blockquote>
+<hr />
+<h2 id="2-cyclonedds">2. 为什么要换 CycloneDDS？<a class="headerlink" href="#2-cyclonedds" title="Permanent link">&para;</a></h2>
+<p><strong>问题：</strong> 使用 ROS2 默认的 FastDDS 运行 EGO-Planner 时非常卡顿。</p>
+<p><strong>解决：</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</span></code></pre></div>
+<blockquote>
+<p><strong>原理：</strong> DDS 是 ROS2 节点间通信的中间件。FastDDS 和 CycloneDDS 功能一样但实现不同，EGO-Planner 作者发现 FastDDS 与其发布订阅模式不兼容。ROS2 允许通过一个环境变量无缝切换。</p>
+</blockquote>
+<hr />
+<h2 id="3-bashrc">3. .bashrc 的作用<a class="headerlink" href="#3-bashrc" title="Permanent link">&para;</a></h2>
+<p><strong>问题：</strong> 每次开新终端都要重新 <code>export</code> 环境变量。</p>
+<p><strong>解决：</strong> 把 <code>export</code> 语句写进 <code>~/.bashrc</code> 末尾即可永久生效。</p>
+<blockquote>
+<p><strong>原理：</strong> <code>~/.bashrc</code> 是每次打开终端时自动执行的脚本，相当于终端的开机自启动清单。</p>
+</blockquote>
+<hr />
+<h2 id="4">4. 是否需要独立环境？<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p><strong>问题：</strong> 担心 EGO-Planner 的依赖污染现有 ROS2 环境。</p>
+<p><strong>解决：</strong> 不需要，直接建新 workspace 即可。不要把 <code>source install/setup.bash</code> 写进 <code>.bashrc</code>，用时手动 source 更灵活。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/ego_ws
+</span></code></pre></div>
+<blockquote>
+<p><strong>原理：</strong> ROS2 workspace 天然隔离——编译产物都在 <code>install/</code> 目录下，不 source 就不加载，不影响其他项目。只有依赖不同 ROS2 版本时才需要 Docker。</p>
+</blockquote>
+<hr />
+<h2 id="bashrc">附：当前 .bashrc 末尾配置<a class="headerlink" href="#bashrc" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">source</span><span class="w"> </span>/opt/ros/humble/setup.bash
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">LIBGL_ALWAYS_SOFTWARE</span><span class="o">=</span><span class="m">1</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">RMW_IMPLEMENTATION</span><span class="o">=</span>rmw_cyclonedds_cpp
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1270,6 +1573,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../ros2/" class="md-footer__link md-footer__link--prev" aria-label="上一页: ROS2 知识手册">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                ROS2 知识手册
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../tools/" class="md-footer__link md-footer__link--next" aria-label="下一页: 工具速查">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                工具速查
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1297,18 +1638,18 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.tracking", "navigation.top", "navigation.footer", "navigation.path", "toc.follow", "content.code.copy", "content.code.annotate", "content.tabs.link", "search.suggest", "search.highlight"], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.tracking", "navigation.top", "navigation.footer", "navigation.path", "toc.follow", "content.code.copy", "content.code.annotate", "content.tabs.link", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="/javascripts/particles.js"></script>
+        <script src="../../../javascripts/particles.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
       
-        <script src="/javascripts/katex.js"></script>
+        <script src="../../../javascripts/katex.js"></script>
       
     
   </body>

@@ -140,3 +140,28 @@
   transform: scale(1.03);
 }
 
+/* ── 字体配置 ── */
+:root {
+  --md-text-font: "LXGW WenKai Screen", sans-serif;
+  --md-code-font: "JetBrains Mono", monospace;
+}
+
+/* ── 中文阅读字号优化 ── */
+@media screen and (min-width: 960px) {
+  html { font-size: 125%; }
+}
+.md-typeset { font-size: .75rem; }
+
+/* ── 标题字重与间距优化 ── */
+.md-typeset h1, .md-typeset h2 { font-weight: 600; }
+.md-typeset h3 { font-weight: 500; }
+.md-typeset h1, .md-typeset h2,
+.md-typeset h3, .md-typeset h4 { letter-spacing: 0; }
+
+/* ── 面包屑导航颜色 ── */
+.md-nav__title { color: rgba(0, 229, 255, 0.7) !important; }
+
+/* ── 新增分类卡片快速入口样式 ── */
+.md-typeset .grid.cards > :is(ul, ol) > li > p:first-child {
+  color: #e0f7fa;
+}
