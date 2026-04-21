@@ -1,0 +1,144 @@
+{% extends "main.html" %}
+
+{% block content %}
+{# 自定义首页：保留 MkDocs 结构，替换内容区为带 Canvas 动效的 Hero #}
+
+<style>
+.hero-visual {
+  width: 100%;
+  height: 280px;
+  border-radius: 14px;
+  border: 1px solid var(--clr-border, #E6E2D8);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+  margin: 1.5rem 0 2rem;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  cursor: default;
+}
+canvas#heroCanvas {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+}
+.hero-overlay-text {
+  position: absolute; inset: 0; z-index: 2;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  pointer-events: none;
+  user-select: none;
+}
+.hero-freedom {
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.14em;
+  color: #1C1A16;
+  opacity: 0.8;
+  line-height: 1;
+}
+.hero-sub {
+  font-family: "Noto Serif SC", serif;
+  font-size: 12px;
+  letter-spacing: 0.35em;
+  color: #9E988F;
+  margin-top: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+</style>
+
+{# Hero Canvas #}
+<div class="hero-visual">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-overlay-text">
+    <span class="hero-freedom">Freedom</span>
+    <span class="hero-sub">智者乐水 · 仁者乐山</span>
+  </div>
+</div>
+
+{# 原有 Markdown 内容（cards 等） #}
+{{ page.content }}
+
+<script>
+(function() {
+  const canvas = document.getElementById('heroCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const mouse = { x: -999, y: -999 };
+  let t = 0, raf;
+
+  function resize() {
+    const rect = canvas.parentElement.getBoundingClientRect();
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    canvas.style.width = rect.width + 'px';
+    canvas.style.height = rect.height + 'px';
+    ctx.setTransform(1,0,0,1,0,0);
+    ctx.scale(dpr, dpr);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  canvas.parentElement.addEventListener('mousemove', e => {
+    const r = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - r.left;
+    mouse.y = e.clientY - r.top;
+  });
+  canvas.parentElement.addEventListener('mouseleave', () => { mouse.x = mouse.y = -999; });
+
+  const COLS = 22, ROWS = 8;
+  const ACCENT = '#C96442';
+
+  function draw() {
+    const w = canvas.width / dpr, h = canvas.height / dpr;
+    ctx.clearRect(0, 0, w, h);
+
+    const padX = 32, padY = 24;
+    const stepX = (w - padX*2)/(COLS-1);
+    const stepY = (h - padY*2)/(ROWS-1);
+
+    for (let r = 0; r < ROWS; r++) {
+      for (let c = 0; c < COLS; c++) {
+        const bx = padX + c*stepX;
+        const by = padY + r*stepY;
+        const wave = Math.sin(t*0.8 + c*0.4 + r*0.6) * 3;
+        const x = bx, y = by + wave;
+        const dx = x - mouse.x, dy = y - mouse.y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        const inf = Math.max(0, 1 - dist/100);
+        const size = 1.5 + inf*3;
+        const alpha = 0.1 + inf*0.5 + Math.sin(t+c+r)*0.02;
+
+        ctx.beginPath();
+        ctx.arc(x, y, size, 0, Math.PI*2);
+        ctx.fillStyle = inf > 0.1
+          ? ACCENT + Math.round(alpha*255).toString(16).padStart(2,'0')
+          : `rgba(100,95,88,${alpha})`;
+        ctx.fill();
+      }
+    }
+
+    // Lines near mouse
+    for (let r = 0; r < ROWS; r++) {
+      for (let c = 0; c < COLS-1; c++) {
+        const x1 = padX+c*stepX, y1 = padY+r*stepY+Math.sin(t*0.8+c*0.4+r*0.6)*3;
+        const x2 = padX+(c+1)*stepX, y2 = padY+r*stepY+Math.sin(t*0.8+(c+1)*0.4+r*0.6)*3;
+        const mx=(x1+x2)/2, my=(y1+y2)/2;
+        const dd=Math.sqrt((mx-mouse.x)**2+(my-mouse.y)**2);
+        const inf=Math.max(0,1-dd/80);
+        if (inf>0.05){
+          ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2);
+          ctx.strokeStyle=`rgba(201,100,66,${inf*0.22})`;
+          ctx.lineWidth=inf*1.5; ctx.stroke();
+        }
+      }
+    }
+    t += 0.016;
+    raf = requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+{% endblock %}
